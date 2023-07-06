@@ -329,9 +329,10 @@ body {
 }
 
 .section-heading {
-  font-size: clamp(2rem, 3vw, 3.5rem);
+  font-size: clamp(2.5rem, 3vw, 3.5rem);
   line-height: 1.4;
   margin-bottom: 2rem;
+  color: white;
 }
 
 .section-text {
@@ -428,5 +429,60 @@ body {
   .time-ctn {
     width: 6rem;
     height: 6rem;
+  }
+}
+
+
+/* ********************** Cat club section *********************** */
+
+.catclub-section {
+  margin: 2rem auto;
+}
+
+.catclub-section .text-ctn {
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  max-width: 700px;
+  text-align: center;
+}
+
+.club-cards-ctn {
+  margin: 5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.club-card {
+  padding: 3rem 1.5rem;
+  border-radius: 10px;
+  background: #0a3639;
+  color: var(--gray-text);
+  position: relative;
+  max-width: 360px;
+}
+
+.club-card-title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 0rem;
+  width: 15rem;
+  border-radius: 100px;
+  color: var(--white);
+  text-align: center;
+  background: linear-gradient(90deg, #08bc57, #08a2b6);
+}
+
+.club-card p {
+  font-size: 1.125rem;
+}
+
+@media screen and (min-width: 1250px) {
+  .club-cards-ctn {
+    gap: 1rem;
+    justify-content: space-between;
   }
 }
