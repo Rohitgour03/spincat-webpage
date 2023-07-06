@@ -486,3 +486,71 @@ body {
     justify-content: space-between;
   }
 }
+
+
+/* *********************** NFTs section ************************ */
+
+.NFT-section {
+  margin: 7rem 0;
+}
+
+.NFT-section .text-ctn {
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+.NFT-cards-ctn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.NFT-card {
+  width: 90%;
+  max-width: 280px;
+  height: 360px;
+  border-radius: 10px;
+  position: relative;
+
+  background: linear-gradient(var(--dark-bg), var(--dark-bg)) padding-box,
+    linear-gradient(to right, #08bc57, #08a2b6) border-box;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.NFT-card-img {
+  width: 100%;
+  z-index: -10;
+  border-radius: 10px;
+}
+
+.NFT-info-ctn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  color: var(--white);
+  z-index: 100;
+
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.NFT-info-ctn p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.NFT-price-ctn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.NFT-price-us {
+  font-size: 0.9rem;
+}
