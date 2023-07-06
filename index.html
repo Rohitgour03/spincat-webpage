@@ -4,8 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="./index.js"></script>
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-ctn wrapper">
+      <div class="flex">
+        <div class="logo-ctn">
+          SpinCat
+        </div>
   
+        <div class="menu-icon">
+          <button class="toggle-btn">
+            <svg id="menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M21 10H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 6H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 14H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 18H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </button>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li class="nav-link">About</li>
+        <li class="nav-link">Roadmap</li>
+        <li class="nav-link">Contacts</li>
+        <li class="nav-link">FAQ</li>
+      </ul>
+
+      <div class="nav-cta-ctn">
+        <div class="social-category-ctn">
+          <span>Social</span>
+          <span>></span>
+        </div>
+
+        <div class="lang-dropdown flex">
+          <div class="lang-ctn flex">
+            <span class="flag-ctn"></span>
+            <span>En</span>
+          </div>
+          <span>></span>
+        </div>
+        
+        <button class="wallet-btn">
+          <span></span>
+          <span>Go Wallet</span>
+        </button>
+      </div>
+    </div> 
+  </nav>
+
+  <main>
+    <div class="wrapper">
+      <section class="hero-section">
+        <div class="hero-text-ctn">
+          <h1 class="hero-title">
+            <span>Great NFT</span>
+            <span id="outline-title">Collection!</span>
+          </h1>
+          <p class="hero-text">
+            1000 NFTs for While list  2999 NFTs for Public mint Spin cat VIP club community Passive income opportunities
+          </p>
+          <div class="hero-btn-ctn">
+            <button class="cta-btn primary-btn">
+              <span>Mint Now</span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7 7H17V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </span>
+            </button>
+            <button class="cta-btn secondary-btn">
+              <span>White Paper</span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <g clip-path="url(#clip0_2_7)">
+                  <path d="M8 17L12 21L16 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 12V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20.88 18.09C21.7494 17.4786 22.4014 16.6061 22.7413 15.5991C23.0812 14.5921 23.0914 13.503 22.7704 12.4898C22.4494 11.4766 21.8139 10.5921 20.9561 9.96456C20.0983 9.33703 19.0628 8.99916 18 8.99999H16.74C16.4392 7.82787 15.8765 6.73924 15.0941 5.81607C14.3117 4.89291 13.3301 4.15925 12.2232 3.67035C11.1163 3.18144 9.91284 2.95002 8.70353 2.99351C7.49421 3.037 6.31051 3.35426 5.24155 3.92142C4.17259 4.48858 3.24622 5.29084 2.53219 6.26782C1.81815 7.2448 1.33505 8.37104 1.11926 9.56174C0.90347 10.7524 0.96061 11.9766 1.28638 13.142C1.61215 14.3074 2.19806 15.3838 3 16.29" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_2_7">
+                  <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="hero-img-ctn">
+          <img id="hero-img" src="./images/hero-tiger-img.png" alt="Hero tiger img">
+        </div>
+      </section>
+
+      <section class="lottery-section"></section>
+      <section class="catclub-section"></section>
+      <section class="nft-section"></section>
+      <section class="roadmap-section"></section>
+    </div>  
+  </main>
+
+  <footer>
+    <div class="wrapper">
+    </div>
+  </footer>
 </body>
 </html>

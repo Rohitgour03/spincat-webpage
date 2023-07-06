@@ -1,0 +1,316 @@
+/* 1. Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+/* ********************************************** */
+
+:root {
+  --gray-text: #b9bfc8;
+  --dark-bg: #020413;
+  --dark-green: #0b2d2f;
+  --white: #ffffff;
+  --orange-red-gradient: linear-gradient(90deg, #e08118, #d83928)
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--dark-bg);
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ************* Navbar Styles ****************** */
+
+.navbar {
+  padding: 1rem 0;
+  background-color: var(--dark-green);
+  color: var(--gray-text);
+}
+
+.logo-ctn {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.menu-icon {
+  margin-left: auto;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+}
+
+.nav-links {
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.nav-cta-ctn {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.lang-dropdown {
+  border: 1px solid gray;
+  padding: 0.75rem;
+  border-radius: 100px;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.lang-ctn {
+  gap: 0.5rem;
+}
+
+.flag-ctn {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border-radius: 100px;
+  background: gray;
+}
+
+.wallet-btn {
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 100px;
+  background: var(--orange-red-gradient);
+  width: fit-content;
+}
+
+.show {
+  display: flex;
+}
+
+@media screen and (min-width: 680px) {
+
+  .nav-ctn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-cta-ctn {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+
+
+
+
+/* **************** Main Section ***************** */
+
+/* ***************** Hero Section ****************** */
+
+.hero-section {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* Container for hero text */
+.hero-text-ctn {
+  color: var(--white);
+}
+
+.hero-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title span {
+  display: block;
+  line-height: 1.2;
+  font-size: clamp(3rem, 5vw, 4rem);
+}
+
+#outline-title {
+  font-size: clamp(3.5rem, 7vw, 5rem);
+  background: -webkit-linear-gradient(0deg, #08bc57 20%, #08a2b6 90%);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 5px transparent;
+  color: var(--dark-bg);
+}
+
+.hero-text {
+  color: var(--gray-text);
+  margin: 1.5rem 0;
+  text-align: center;
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
+}
+
+.hero-btn-ctn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.cta-btn {
+  padding: 1rem 2.5rem;
+  border: none;
+  background: none;
+  color: var(--white);
+  border-radius: 50px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-btn {
+  background: var(--orange-red-gradient);
+}
+
+.secondary-btn {
+  background: linear-gradient(var(--dark-bg), var(--dark-bg)) padding-box,
+    var(--orange-red-gradient) border-box;
+  border-radius: 50em;
+  border: 2px solid transparent;
+}
+
+@media screen and (min-width: 780px) {
+  .hero-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 7rem auto;
+  }
+
+  .hero-text-ctn {
+    width: 45%;
+    font-size: 1.5rem;
+  }
+
+  .hero-title {
+    text-align: left;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-title span {
+    font-size: 4rem;
+  }
+
+  .hero-btn-ctn {
+    flex-direction: row;
+  }
+
+  .primary-btn {
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .hero-img-ctn {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-section {
+    margin: 3rem auto;
+  }
+}
