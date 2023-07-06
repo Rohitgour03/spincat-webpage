@@ -99,14 +99,29 @@ body {
   color: #ffffff;
 }
 
+.menu-icon {
+  margin-left: auto;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+}
+
 .nav-links {
   gap: 1rem;
   list-style-type: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
   display: none;
 }
 
 .nav-cta-ctn {
   gap: 1rem;
+  display: flex;
+  flex-direction: column;
   display: none;
 }
 
@@ -115,6 +130,7 @@ body {
   padding: 0.75rem;
   border-radius: 100px;
   gap: 0.5rem;
+  width: fit-content;
 }
 
 .lang-ctn {
@@ -135,15 +151,29 @@ body {
   border: none;
   border-radius: 100px;
   background: var(--orange-red-gradient);
+  width: fit-content;
+}
+
+.show {
+  display: flex;
 }
 
 @media screen and (min-width: 680px) {
+
+  .nav-ctn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .menu-icon {
     display: none;
   }
 
   .nav-cta-ctn {
     display: flex;
+    align-items: center;
+    flex-direction: row;
   }
 }
 
@@ -156,5 +186,6 @@ body {
 
   .nav-links {
     display: flex;
+    flex-direction: row;
   }
 }
