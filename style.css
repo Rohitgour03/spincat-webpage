@@ -54,3 +54,107 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+
+/* ********************************************** */
+
+:root {
+  --gray-text: #9da3ae;
+  --dark-bg: #020413;
+  --dark-green: #0b2d2f;
+  --white: #ffffff;
+  --orange-red-gradient: linear-gradient(90deg, #e08118, #d83928)
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--dark-bg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ************* Navbar Styles ****************** */
+
+.navbar {
+  padding: 1rem 0;
+  background-color: var(--dark-green);
+  color: var(--gray-text);
+}
+
+.logo-ctn {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-links {
+  gap: 1rem;
+  list-style-type: none;
+  display: none;
+}
+
+.nav-cta-ctn {
+  gap: 1rem;
+  display: none;
+}
+
+.lang-dropdown {
+  border: 1px solid gray;
+  padding: 0.75rem;
+  border-radius: 100px;
+  gap: 0.5rem;
+}
+
+.lang-ctn {
+  gap: 0.5rem;
+}
+
+.flag-ctn {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border-radius: 100px;
+  background: gray;
+}
+
+.wallet-btn {
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 100px;
+  background: var(--orange-red-gradient);
+}
+
+@media screen and (min-width: 680px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-cta-ctn {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+}

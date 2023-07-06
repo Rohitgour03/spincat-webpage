@@ -4,16 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./index.js"></script>
 </head>
 <body>
   <nav class="navbar">
-    <div class="wrapper">
-    </div>
+    <div class="wrapper flex">
+      <div class="logo-ctn">
+        SpinCat
+      </div>
+
+      <div class="menu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M21 10H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 6H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 14H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 18H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      </div>
+
+      <ul class="nav-links flex">
+        <li class="nav-link">About</li>
+        <li class="nav-link">Roadmap</li>
+        <li class="nav-link">Contacts</li>
+        <li class="nav-link">FAQ</li>
+      </ul>
+
+      <div class="nav-cta-ctn flex">
+        <div class="social-category-ctn">
+          <span>Social</span>
+          <span>></span>
+        </div>
+
+        <div class="lang-dropdown flex">
+          <div class="lang-ctn flex">
+            <span class="flag-ctn"></span>
+            <span>En</span>
+          </div>
+          <span>></span>
+        </div>
+        
+        <button class="wallet-btn">
+          <span></span>
+          <span>Go Wallet</span>
+        </button>
+      </div>
+    </div> 
   </nav>
 
   <main>
     <div class="wrapper">
-      <section class="intro-section"></section>
+      <section class="hero-section"></section>
       <section class="lottery-section"></section>
       <section class="catclub-section"></section>
       <section class="nft-section"></section>
