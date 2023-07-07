@@ -748,3 +748,59 @@ body {
 .checkpoint-text {
   color: var(--gray-text);
 }
+
+
+/* ******************* Contact Us section ******************** */
+
+.contact-section {
+  margin: 7rem 0;
+  background: #10365c;
+  color: white;
+  padding: 4rem 0 3rem;
+}
+
+.contact-ctn {
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+.form-ctn {
+  background: rgba(255, 255, 255, 0.1);
+  max-width: 450px;
+  margin: 2rem auto;
+  border-radius: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-ctn span {
+  width: 80%;
+}
+
+.form-ctn input {
+  width: 100%;
+  border: none;
+  border-radius: 100px;
+  padding: 0.35rem 1.75rem;
+  background: transparent;
+  color: white;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.form-ctn input::placeholder {
+  color: var(--gray-text);
+}
+
+.form-ctn .submit-btn {
+  padding: 0.5rem 1.75rem;
+  border: none;
+  border-radius: 100px;
+  color: var(--white);
+  font-weight: 600;
+
+  background: var(--orange-red-gradient);
+}
