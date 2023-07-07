@@ -63,7 +63,7 @@ h6 {
   --dark-bg: #020413;
   --dark-green: #0b2d2f;
   --white: #ffffff;
-  --green-gradient: linear-gradient(0deg, #08bc57 20%, #08a2b6 90%);
+  --green-gradient: linear-gradient(90deg, #08bc57 20%, #08a2b6 90%);
   --orange-red-gradient: linear-gradient(90deg, #e08118, #d83928)
 }
 
@@ -72,6 +72,7 @@ body {
   font-weight: 400;
   background-color: var(--dark-bg);
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -553,4 +554,197 @@ body {
 
 .NFT-price-us {
   font-size: 0.9rem;
+}
+
+
+/* ****************** Roadmap section ****************** */
+
+.roadmap-section .text-ctn {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 700px;
+}
+
+
+.line-design {
+  margin: 5rem 0 2rem 40%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 600px;
+  height: 20px;
+  position: relative;
+}
+
+.line-design-left {
+  margin-top: 25rem;
+  margin-left: -30%;
+  transform: rotate(180deg);
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: var(--green-gradient);
+  border-radius: 100px;
+}
+
+.dash-line {
+  /* height: 2px; */
+  width: 100%;
+  overflow: hidden;
+  border: none;
+  border-width: 1px;
+  border-style: dashed;
+  border-image: linear-gradient(to right, #08bc57 10%, #08a2b6 40%, var(--dark-bg) 95%) 1;
+}
+
+.dash-line-left {
+  width: 60%;
+}
+
+
+/* ************** Raodmap design ************** */
+
+.roadmap-design-ctn {
+  margin: 20rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  position: relative;
+}
+
+.roadmap-left-line,
+.roadmap-right-line {
+  position: absolute;
+  width: 500px;
+  height: 10px;
+  border: none;
+  border-top: 2px dashed #08bc57;
+}
+
+.roadmap-left-line {
+  bottom: -8px;
+  left: -320px;
+}
+
+.roadmap-right-line {
+  bottom: -8px;
+  right: -320px;
+}
+
+
+.half-circle {
+  width: 140px;
+  height: 80px;
+  border: 3px dashed #08bc57;
+  position: relative;
+}
+
+.half-circle-odd {
+  border-bottom: none;
+  border-radius: 100px 100px 0 0;
+}
+
+.half-circle-even {
+  border-top: none;
+  border-radius: 0 0 100px 100px;
+  position: relative;
+  top: 80px;
+}
+
+.pt-ctn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: var(--green-gradient);
+  box-shadow: 0 0 5px #08bc57, 0 0 7px #25db74;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.pt-ctn-even {
+  position: absolute;
+  top: 0;
+}
+
+.arrow-ctn {
+  width: 2px;
+  height: 100px;
+  border-left: 1px dashed #3960e0;
+
+  position: absolute;
+  left: 50%;
+  top: 90px;
+}
+
+.arrow-ctn::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background: #3960e0;
+
+  position: absolute;
+  left: -5px;
+  bottom: -20px;
+}
+
+.arrow-ctn-even {
+  top: -110px;
+}
+
+.arrow-ctn-even::after {
+  top: -20px;
+}
+
+.checkpoint-num {
+  width: 40px;
+  height: 40px;
+  color: #020210;
+  font-weight: 600;
+  background: #28c3e9;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #28c3e9;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 200px;
+}
+
+.checkpoint-num-even {
+  top: -190px;
+}
+
+.checkpoint-text-ctn {
+  position: absolute;
+  color: white;
+  width: 250px;
+  text-align: center;
+  top: 275px;
+}
+
+.checkpoint-text-ctn-even {
+  top: -325px;
+}
+
+.checkpoint-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.checkpoint-text {
+  color: var(--gray-text);
 }
