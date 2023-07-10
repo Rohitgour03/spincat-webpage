@@ -63,6 +63,7 @@ h6 {
   --dark-bg: #020413;
   --dark-green: #0b2d2f;
   --white: #ffffff;
+  --green-gradient: linear-gradient(90deg, #08bc57 20%, #08a2b6 90%);
   --orange-red-gradient: linear-gradient(90deg, #e08118, #d83928)
 }
 
@@ -71,6 +72,7 @@ body {
   font-weight: 400;
   background-color: var(--dark-bg);
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -312,5 +314,571 @@ body {
 @media screen and (min-width: 1024px) {
   .hero-section {
     margin: 3rem auto;
+  }
+}
+
+
+/* *************** Lottery Section *************** */
+
+.lottery-section {
+  margin: 5rem auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.section-heading {
+  font-size: clamp(2.5rem, 3vw, 3.5rem);
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.section-text {
+  color: var(--gray-text);
+  font-size: clamp(1.125rem, 3vw, 1.3rem);
+}
+
+.gradient-text {
+  background-image: -webkit-linear-gradient(0deg, #08bc57 20%, #08a2b6 90%);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lottery-card-ctn {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.graphics-ctn {
+  padding: 2rem 0;
+}
+
+.lottery-card {
+  padding: 1rem;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, #08bc57, var(--dark-bg)) 1 100%;
+  border-radius: 50% 0 0 0;
+  max-width: 380px;
+}
+
+.lottery-card ul {
+  padding-left: 1.5rem;
+}
+
+.lottery-card h3 {
+  font-size: 1.5rem;
+}
+
+.time-cards-ctn {
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.time-ctn {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* border-radius: 100px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--green-gradient); */
+
+  background: linear-gradient(var(--dark-bg), var(--dark-bg)) padding-box,
+    var(--green-gradient) border-box;
+  border-radius: 50em;
+  border: 4px solid transparent;
+}
+
+.time-ctn span {
+  line-height: 1.3;
+}
+
+.time-num {
+  font-weight: 700;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+@media screen and (min-width: 680px) {
+  .lottery-card-ctn {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .lottery-section {
+    flex-direction: row;
+  }
+
+  .lottery-section .text-ctn,
+  .lottery-section .graphics-ctn {
+    width: 50%;
+  }
+
+  .time-ctn {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+
+/* ********************** Cat club section *********************** */
+
+.catclub-section {
+  margin: 2rem auto;
+}
+
+.catclub-section .text-ctn {
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  max-width: 700px;
+  text-align: center;
+}
+
+.club-cards-ctn {
+  margin: 5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.club-card {
+  padding: 3rem 1.5rem;
+  border-radius: 10px;
+  background: #0a3639;
+  color: var(--gray-text);
+  position: relative;
+  max-width: 360px;
+}
+
+.club-card-title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 0rem;
+  width: 15rem;
+  border-radius: 100px;
+  color: var(--white);
+  text-align: center;
+  background: linear-gradient(90deg, #08bc57, #08a2b6);
+}
+
+.club-card p {
+  font-size: 1.125rem;
+}
+
+@media screen and (min-width: 1250px) {
+  .club-cards-ctn {
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
+
+
+/* *********************** NFTs section ************************ */
+
+.NFT-section {
+  margin: 7rem 0;
+}
+
+.NFT-section .text-ctn {
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+.NFT-cards-ctn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.NFT-card {
+  width: 90%;
+  max-width: 280px;
+  height: 360px;
+  border-radius: 10px;
+  position: relative;
+
+  background: linear-gradient(var(--dark-bg), var(--dark-bg)) padding-box,
+    linear-gradient(to right, #08bc57, #08a2b6) border-box;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.NFT-card-img {
+  width: 100%;
+  z-index: -10;
+  border-radius: 10px;
+}
+
+.NFT-info-ctn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  color: var(--white);
+  z-index: 100;
+
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.NFT-info-ctn p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.NFT-price-ctn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.NFT-price-us {
+  font-size: 0.9rem;
+}
+
+
+/* ****************** Roadmap section ****************** */
+
+.roadmap-section .text-ctn {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 700px;
+}
+
+
+.line-design {
+  margin: 5rem 0 2rem 40%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 600px;
+  height: 20px;
+  position: relative;
+}
+
+.line-design-left {
+  margin-top: 25rem;
+  margin-left: -30%;
+  transform: rotate(180deg);
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: var(--green-gradient);
+  border-radius: 100px;
+}
+
+.dash-line {
+  /* height: 2px; */
+  width: 100%;
+  overflow: hidden;
+  border: none;
+  border-width: 1px;
+  border-style: dashed;
+  border-image: linear-gradient(to right, #08bc57 10%, #08a2b6 40%, var(--dark-bg) 95%) 1;
+}
+
+.dash-line-left {
+  width: 60%;
+}
+
+
+/* ************** Raodmap design ************** */
+
+.roadmap-design-ctn {
+  margin: 20rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  position: relative;
+}
+
+.roadmap-left-line,
+.roadmap-right-line {
+  position: absolute;
+  width: 500px;
+  height: 10px;
+  border: none;
+  border-top: 2px dashed #08bc57;
+}
+
+.roadmap-left-line {
+  bottom: -8px;
+  left: -320px;
+}
+
+.roadmap-right-line {
+  bottom: -8px;
+  right: -320px;
+}
+
+
+.half-circle {
+  width: 140px;
+  height: 80px;
+  border: 3px dashed #08bc57;
+  position: relative;
+}
+
+.half-circle-odd {
+  border-bottom: none;
+  border-radius: 100px 100px 0 0;
+}
+
+.half-circle-even {
+  border-top: none;
+  border-radius: 0 0 100px 100px;
+  position: relative;
+  top: 80px;
+}
+
+.pt-ctn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: var(--green-gradient);
+  box-shadow: 0 0 5px #08bc57, 0 0 7px #25db74;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.pt-ctn-even {
+  position: absolute;
+  top: 0;
+}
+
+.arrow-ctn {
+  width: 2px;
+  height: 100px;
+  border-left: 1px dashed #3960e0;
+
+  position: absolute;
+  left: 50%;
+  top: 90px;
+}
+
+.arrow-ctn::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background: #3960e0;
+
+  position: absolute;
+  left: -5px;
+  bottom: -20px;
+}
+
+.arrow-ctn-even {
+  top: -110px;
+}
+
+.arrow-ctn-even::after {
+  top: -20px;
+}
+
+.checkpoint-num {
+  width: 40px;
+  height: 40px;
+  color: #020210;
+  font-weight: 600;
+  background: #28c3e9;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #28c3e9;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 200px;
+}
+
+.checkpoint-num-even {
+  top: -190px;
+}
+
+.checkpoint-text-ctn {
+  position: absolute;
+  color: white;
+  width: 250px;
+  text-align: center;
+  top: 275px;
+}
+
+.checkpoint-text-ctn-even {
+  top: -325px;
+}
+
+.checkpoint-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.checkpoint-text {
+  color: var(--gray-text);
+}
+
+
+/* ******************* Contact Us section ******************** */
+
+.contact-section {
+  margin: 7rem 0;
+  background: #10365c;
+  color: white;
+  padding: 4rem 0 3rem;
+}
+
+.contact-ctn {
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+.form-ctn {
+  background: rgba(255, 255, 255, 0.1);
+  max-width: 450px;
+  margin: 2rem auto;
+  border-radius: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-ctn span {
+  width: 80%;
+}
+
+.form-ctn input {
+  width: 100%;
+  border: none;
+  border-radius: 100px;
+  padding: 0.35rem 1.75rem;
+  background: transparent;
+  color: white;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.form-ctn input::placeholder {
+  color: var(--gray-text);
+}
+
+.form-ctn .submit-btn {
+  padding: 0.5rem 1.75rem;
+  border: none;
+  border-radius: 100px;
+  color: var(--white);
+  font-weight: 600;
+
+  background: var(--orange-red-gradient);
+}
+
+
+/* ****************** Footers ****************** */
+
+footer {
+  width: 100%;
+  color: white;
+  padding: 4rem 0;
+}
+
+.logo-ctn {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.copyright-text {
+  color: var(--gray-text);
+}
+
+.nav-social-ctn {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-links-ctn {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-link{
+  cursor: pointer;
+}
+
+.social-links-ctn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.social-link-ctn {
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link-ctn img {
+  width: 30px;
+  height: auto;
+}
+
+@media screen and (min-width: 780px) {
+  .footer-ctn {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-links-ctn {
+    justify-content: flex-end;
+    margin: 0;
+  }
+
+  .nav-social-ctn {
+    margin: 0;
   }
 }
